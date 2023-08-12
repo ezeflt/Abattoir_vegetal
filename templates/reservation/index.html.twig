@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="{{ asset('./assets/css/reservation.css') }}">
+</head>
+<body>
+    <!-- header nav bar -->
+    {% include "_header.html.twig" %}
+    <!-- container -->
+    <div id="container">
+        <!-- main -->
+        <main>
+            <div id="reservationBox">
+                <div id="reservationHeader">
+                    <h1>My reservations</h1>
+                    <a href="{{ path('app_select_group') }}">Gimme a friend</a>
+                </div>
+                <div id="Reservations">
+                    {% set color = '' %}
+                    {% set colorData = '' %}
+                    {% for group in allReservation %}
+                        <!-- set color -->
+                        {% if group.authors == username  %}{% set color = '#00f3a6' %}{% endif %} 
+                        {% for guest in group.guests %}
+                            <!-- set color -->
+                            {% if guest.guest.id == id and guest.invitation == 'refuse'  %}{% set color = 'red' %}{% set colorData = 'red' %}{% endif %}
+                            {% if guest.guest.id == id and guest.invitation == 'accept'  %}{% set color = '#00f3a6'%}{% set colorData = '#00f3a6' %}{% endif %}
+                            {% if guest.guest.id == id and guest.invitation == 'waiting'  %}{% set color = 'grey'%}{% set colorData = '#FF6C27' %}{% endif %}
+                        {% endfor %}
+                        <article>
+                            <div class='firstData'>
+                                <figure><div style='background-color: {{color}}'></div></figure>
+                                <div id="dateBox">
+                                    <strong>{{group.createGroupDate|date("m/d/Y")}}</strong>
+                                </div>
+                            </div>
+                            <div class="dataContainer">
+                                <section class="dataHeader">
+                                    <h2 style='color: {{colorData}}'>{{group.createGroupDate|date("m/d/Y")}}</h2> <span>12h00</span>
+                                    <img src="{{ asset('./assets/img/icones/croix/croix-noire-big.svg') }}" alt="">
+                                </section>
+                                <section class="dataMidle">
+                                    <div class="firstMiddle">
+                                        <h4>Who eats ?</h4>
+                                        <span>{{group.guests|length}} People</span>
+                                    </div>
+                                    <div class="secondMiddle">
+                                        {% for guest in group.guests %}
+                                            <img src="{{guest.guest.image}}" alt="">
+                                        {% endfor %}
+                                    </div>
+                                </section>
+                                <section class="dataFooter">
+                                    <div class="dataBonus">
+                                        <h6 style='color: {{colorData}}'>{{group.authors}} invited you to eat</h6>
+                                        <div class="usersFooter">
+                                            {% for guest in group.guests %}
+                                                <span>{{guest.guest.username}} <span>({{guest.invitation}})</span></span>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                    {% for guest in group.guests %}
+                                        {% if guest.guest.id == id and guest.invitation == 'waiting'  %}
+                                            <a href="{{ path('response_Invitation', { 'id': group.id, 'bool': 'true' }) }}">comfirm</a>
+                                            <a href="{{ path('response_Invitation', { 'id': group.id, 'bool': 'false' }) }}">declin</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                </section>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        {% include "_footer.html.twig" %}
+    </div>
+</body>
+</html>
+<script src="{{ asset('./assets/js/reservation.js') }}"></script>
+<script src='{{ asset('./assets/js/header.js') }}'></script>

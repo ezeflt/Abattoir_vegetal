@@ -1,0 +1,48 @@
+<!-- navbar -->
+<div id="titleBox">
+    <a href="{{ path('app_home') }}"><img src="{{asset('./assets/img/logo/abattoir-vegetal-logo-big-dark.svg')}}" alt="title logo"></a>
+</div>
+<figure id="burgerBox">
+    <img src="{{asset('./assets/img/icones/menuburger/menu-burger-dark.svg')}}" alt="burgerIcon">
+</figure>
+<div id="navResponsive">
+    <nav>
+        <ul id='ulNavbar'>
+            {% if app.session.get('id')|length >1 %}
+                <a href="{{ path('app_home') }}"><li>Home</li></a>
+                <a href="{{ path('app_reservation') }}"><li>my reservations</li></a>
+                <a href="{{ path('app_user_profil_success') }}"><li>my profil</li></a>
+                <a href="{{ path('app_select_group') }}"><li>gimme a friend</li></a>
+                <a href="{{ path('app_logout') }}"><li>Logout</li></a>
+            {% else %}
+                <a href="{{ path('app_home') }}"><li>Home</li></a> 
+                <a href="{{ path('app_register') }}"><li>register</li></a>
+                <a href="{{ path('app_login') }}"><li>login</li></a>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+<div id="navbarBox">
+    <img id="nav1" src="{{asset('./assets/img/boutons/abattoir-vegetal-click-collect-off.svg')}}" alt="nav1">
+    <img id="nav2" src="{{asset('./assets/img/boutons/abattoir-vegetal-gimme-friend-off.svg')}}" alt="nav2">
+    <img id="nav3" src="{{asset('./assets/img/boutons/abattoir-vegetal-gimme-table-off.svg')}}" alt="nav3">
+</div>
+<!-- modal user not connected -->
+<article id="modalBox">
+    <div id="modal">
+        <p></p>
+        <div id="textBox">
+            <h6>You need an account to use this website please create an account or login</h6>
+        </div>
+        <div id="btnBox">
+            <div id="xMarkBox">
+                <img id="xMark" src="{{asset('./assets/img//icones/croix/croix-fleur-jaune-small.svg')}}" alt="xMark">
+            </div>
+            <div id="palteBox">
+                <img id="palteBox" src="{{asset('./assets/img/formes/monstera-small-menthe-vertical.svg')}}" alt="algue">
+            </div>
+            <a href="{{ path('app_register') }}"><button>register</button></a>
+            <a href="{{ path('app_login') }}"><button>login</button></a>
+        </div>
+    </div>
+</article>

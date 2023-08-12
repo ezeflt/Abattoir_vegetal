@@ -1,0 +1,42 @@
+<!-- header nav bar -->
+<header>
+    <div>
+        <figure id="burger">
+            <img src="{{ asset('./assets/img/icones/menuburger/menu-burger-dark.svg')}}" alt="burgerIcon">
+        </figure>
+        <figure id="logo">
+            <a href="{{ path('app_home') }}"><img src="{{ asset('./assets/img/logo/abattoir-vegetal-logo-big-dark.svg')}}" alt="title logo"/></a>
+        </figure>
+        <nav>
+            <a href='{{ path('app_user_profil_success') }}' class='logoNavBox'>
+                <img class="logoNav"  src="{{ asset('./assets/img/icones/profil/profil-small-light.svg') }}" alt="logo" />
+            </a>
+            <div href='{{ path('app_user_profil_success') }}' id='notif' class='logoNavBox'>
+                <img class="logoNav"  src="{{ asset('./assets/img/icones/notifications/notification-small-light.svg')}}" alt="logo" />
+            </div>
+            <a href='{{ path('app_reservation') }}' class='logoNavBox'>
+                <img class="logoNav"  src="{{ asset('./assets/img/icones/reservation/reservation-small-light.svg')}}" alt="logo" />
+            </a>
+        </nav>
+    </div>
+</header>
+<div id='notificationBox'>
+
+</div>
+<div id="navResponsive">
+    <nav>
+        <ul>
+            {% if app.session.get('id')|length >1 %}
+                <a href="{{ path('app_home') }}"><li>Home</li></a>
+                <a href="{{ path('app_reservation') }}"><li>my reservations</li></a>
+                <a href="{{ path('app_user_profil_success') }}"><li>my profil</li></a>
+                <a href="{{ path('app_select_group') }}"><li>gimme a friend</li></a>
+                <a href="{{ path('app_logout') }}"><li>Logout</li></a>
+            {% else %}
+                <a href="{{ path('app_home') }}"><li>Home</li></a> 
+                <a href="{{ path('app_register') }}"><li>register</li></a>
+                <a href="{{ path('app_login') }}"><li>login</li></a>
+            {% endif %}
+        </ul>
+    </nav>
+</div>

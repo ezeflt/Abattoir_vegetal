@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ asset('./assets/css/register.css') }}">
+    <title>REGISTER</title>
+</head>
+<!-- body of page -->
+<body>
+    <!-- html background -->
+    {% include "Register/background.html.twig" %}
+    <!-- html navbar -->
+    {% include "_nav.html.twig" %}
+    <!-- register Box -->
+    <article id="registerBox1">
+        <h1>register</h1>
+        <div id="registerBox2">
+            {{ form_errors(FormRegister) }}
+            {{ form_start(FormRegister, {'attr': {'class': 'inputBox'}}) }}
+            {# Display alert message if there are any errors #}
+              {% if alert is not empty %}
+                <span style='color:red'>{{ alert }}</span>
+              {% endif %}
+                <!-- email form -->
+                <div class="input">
+                    {{ form_widget(FormRegister.email, {'attr': {'class': 'input custom-input', 'placeholder': 'Votre adresse mail'}}) }}
+                </div>
+                <!-- password form -->
+                <div class="input">
+                    {{ form_widget(FormRegister.password.first, {'attr': {'class': 'input custom-input', 'placeholder': 'Mot de passe'}}) }}
+                </div>
+                <div class="input">
+                    {{ form_widget(FormRegister.password.second, {'attr': {'class': 'input custom-input', 'placeholder': 'Confirmez votre mot de passe'}}) }}
+                </div>
+                <!-- accept form -->
+                <div class="form-group">
+                    {{ form_widget(FormRegister.terms, {'attr': {'class': 'custom-checkbox'}}) }}
+                    {{ form_label(FormRegister.terms, "I have read and accept the general conditions", {'label_attr': {'class': 'custom-label'}}) }}
+                </div>
+                <!-- register with google -->
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" alt="google logo">
+                    <button>register with google</button>
+                </figure>
+                <!-- button submit -->
+                {{ form_widget(FormRegister.submit, {'attr': {'id': 'btn', 'class': 'btn'}}) }}
+                 <!-- go to login page -->
+                <a href="{{ path('app_login') }}">
+                    <span>Login</span>
+                </a>
+            {{ form_end(FormRegister) }}
+        </div>
+    </article>
+</body>
+<script src="{{asset('./assets/js/navbar.js')}}"></script>
+</html>

@@ -1,0 +1,448 @@
+/* rules for all css */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gasoek One', sans-serif;
+}
+/* body page background img */
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* title box page  */
+#titleBox{
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+/* title */
+#titleBox img{
+    height: 70%;
+    margin-bottom: 25px;
+    position: absolute;
+    margin-left: -40px;
+}
+#textBox{
+    width: 80%;
+    text-align: center;
+}
+/* subtitle */
+#titleBox h4{
+    text-transform: uppercase;
+    color: #12231A;
+    font-size: 1.2rem;
+    text-align: center;
+}
+/* burger Box */
+#burgerBox {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 45px;
+    width: 38px;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+}
+/* burger image logo */
+#burgerBox img{
+    height: 100%;
+    width: 100%;
+}
+/* nav responsive */
+#navResponsive{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    display: none;
+}
+#navResponsive nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+a{
+    text-decoration: none;
+}
+#navResponsive nav ul li{
+    list-style-type: square;
+    margin: 30px 40px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 1px 1px 1px #12231A;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* navbar box */
+#navbarBox{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 2%;
+    z-index: 1;
+}
+/* navbars */
+#navbarBox img{
+    margin: 20px 0px;
+    height: 60px;
+    cursor: pointer;
+}
+#modalBox{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    backdrop-filter: blur(4px);
+}
+#modal{
+    height: 300px;
+    width: 600px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#modal h6{
+    font-size: 1.4rem;
+    color: #12231A;
+    font-weight: 250;
+    margin: 5px;
+}
+#btnBox{
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#btnBox a{
+    height: 100%;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #12231A;
+    font-size: 1.2rem;
+    z-index: 4;
+}
+#btnBox a button{
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #12231A;
+    background: #fff;
+    border: 2px solid #12231A;
+    font-size: 1.2rem;
+    z-index: 4;
+}
+#btnBox a:nth-of-type(2) button{
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    background: #12231A;
+    border: 0;
+    font-size: 1.2rem;
+}
+#xMarkBox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+}
+#xMark{
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -60px;
+}
+#palteBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+#palteBox{
+    position: absolute;
+    margin-left: 0px;
+}
+/* first background element*/
+#yellowBackground{
+    height: 100%;
+    width: 35%;
+    background: #FFE801;
+    position: absolute;
+    margin-right: 50%;
+}
+/* second background element*/
+#seaweedLeftBox{
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+#seaweedLeftBox img{
+    margin-left: 8%;
+}
+/* third background element*/
+#seaweedBottom{
+    position: absolute;
+    bottom: 0;
+    margin-right: 30%;
+    z-index: 2;
+    pointer-events: none;
+}
+#seaweedBottom img{
+    margin-bottom: -40px;
+    pointer-events: none;
+}
+/* first box of register */
+#registerBox1{
+    height: 500px;
+    width: 450px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* title of register box */
+#registerBox1 h1{
+    position: absolute;
+    color: #E83647;
+    margin-top: -25px;
+    margin-left: -350px;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 900;
+    top: 0;
+    text-shadow: 1px 0 #E83647, -1px 0 #E83647, 0 1px #E83647, 0 -1px #E83647,
+               1px 1px #E83647, -1px -1px #E83647, 1px -1px #E83647, -1px 1px #E83647;
+}
+/* second box of register */
+#registerBox2{
+    height: 95%;
+    width: 95%;
+    border: 1px solid #FFAB86;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+/* box with all input and button */
+.inputBox{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputBox a{
+    text-decoration: underline;
+}
+.input{
+    height: 40px;
+    width: 100%;
+    background: #E6E6E6;
+    border: 0;
+    padding-left: 20px;
+}
+.input:focus{
+    border: 0;
+    outline-offset: 0px;
+    outline: none;
+}
+.inputBox .btn{
+    padding: 3% 10%;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #fff;
+    border: 1.5px solid #12231A;
+    color: #12231A;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.inputBox .btn:hover{
+    padding: 3% 10%;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #12231A;
+    border: 1.5px solid #12231A;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.inputBox figure{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border: 1.5px solid #12231A;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.inputBox figure button{
+    height: 100%;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #12231A;
+    border: 0;
+    background: #fff;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.inputBox figure img{
+    height: 80%;
+    width: auto;
+    cursor: pointer;
+}
+.inputBox a{
+    color: #000;
+}
+@media screen and ( max-width : 1000px ) {
+    /* second background element*/
+    #seaweedLeftBox{
+        position: absolute;
+        right: 0;
+        z-index: 0;
+        width: 40%;
+        height: auto;
+    }
+    #seaweedLeftBox img{
+        margin-left: 8%;
+        height: auto;
+        width: 100%;
+    }
+    /* third background element*/
+    #seaweedBottom{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 30%;
+        height: auto;
+    }
+    #seaweedBottom img{
+        margin-bottom: -40px;
+        width: 100%;
+        height: auto;
+    }
+    /* hamberger */
+    #burgerBox{
+        display: block;
+    }
+    /* navbar box */
+    #navbarBox{
+        display: none;
+    }
+}
+@media screen and ( max-width : 700px ) {
+    /* title of register box */
+    #registerBox1 h1{
+        margin-left: 0px;
+    }
+    #navResponsive nav ul li{
+        font-size: 2rem;
+        margin: 30px 0px;
+    }
+}
+@media screen and ( max-width : 600px ) {
+    #navResponsive{
+        height: 120%;
+    }
+    #burgerBox {
+        margin-left: 24px;
+    }
+    #navResponsive nav ul li {
+        margin: 26px 14px;
+        font-size: 1.5rem;
+    }
+    #navResponsive nav {
+        margin-left: 27px;
+    }
+}
+@media screen and ( max-width : 550px ) {
+    #navResponsive{
+        height: 120%;
+    }
+    #burgerBox {
+        margin-left: 24px;
+    }
+    #navResponsive nav ul li {
+        margin: 26px 14px;
+        font-size: 1.5rem;
+    }
+    #navResponsive nav {
+        margin-left: 27px;
+    }
+}
+@media screen and ( max-width : 500px ) {
+    /* first box of register */
+    #registerBox1{
+        height: 500px;
+        width: 100%;
+        background: #fff;
+        z-index: 1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    /* title of register box */
+    #registerBox1 h1{
+        font-size: 3rem;
+    }
+    .inputBox figure button{
+        font-size: 0.75rem;
+    }
+    /* second background element*/
+    #seaweedLeftBox{
+        display: none;
+    }
+    #seaweedLeftBox img{
+        display: none;
+    }
+    /* third background element*/
+    #seaweedBottom{
+        display: none;
+    }
+    #seaweedBottom img{
+        display: none;
+    }
+}

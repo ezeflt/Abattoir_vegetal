@@ -1,0 +1,33 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="50" fill="#1E1E1E"/>
+<g id="Design System - Icons">
+<path d="M-1050 -329C-1050 -330.105 -1049.1 -331 -1048 -331H492C493.105 -331 494 -330.105 494 -329V1131C494 1132.1 493.105 1133 492 1133H-1048C-1049.1 1133 -1050 1132.1 -1050 1131V-329Z" fill="#FBFAF4"/>
+<g id="zoom">
+<g id="Property 1=retrecir" clip-path="url(#clip0_0_1)">
+<g id="Group">
+<path id="Vector" d="M48.4033 1.59571L31.1054 18.8085" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M43.5732 19.2979L30.6158 19.2979L30.6158 6.40423" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group_2">
+<path id="Vector_3" d="M1.59569 1.5957L18.8936 18.8085" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M19.3828 6.40423L19.3828 19.2979L6.42537 19.2979" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group_3">
+<path id="Vector_5" d="M1.59568 48.4044L18.8936 31.1917" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M6.42537 30.7023L19.3828 30.7023L19.3828 43.5959" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group_4">
+<path id="Vector_7" d="M48.4033 48.4044L31.1054 31.1917" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M30.6158 43.5959L30.6158 30.7023L43.5732 30.7023" stroke="#12231A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<rect x="-67.5" y="-19.5" width="137" height="89" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+<path d="M-1048 -330H492V-332H-1048V-330ZM493 -329V1131H495V-329H493ZM492 1132H-1048V1134H492V1132ZM-1049 1131V-329H-1051V1131H-1049ZM-1048 1132C-1048.55 1132 -1049 1131.55 -1049 1131H-1051C-1051 1132.66 -1049.66 1134 -1048 1134V1132ZM493 1131C493 1131.55 492.552 1132 492 1132V1134C493.657 1134 495 1132.66 495 1131H493ZM492 -330C492.552 -330 493 -329.552 493 -329H495C495 -330.657 493.657 -332 492 -332V-330ZM-1048 -332C-1049.66 -332 -1051 -330.657 -1051 -329H-1049C-1049 -329.552 -1048.55 -330 -1048 -330V-332Z" fill="white" fill-opacity="0.1"/>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>

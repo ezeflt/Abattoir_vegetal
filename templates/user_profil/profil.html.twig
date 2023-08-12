@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('./assets/css/myProfil.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PROFIL</title>
+</head>
+<body>
+    <!-- background element -->
+    <figure id="yellowBackground" ></figure>
+    <!-- header nav bar -->
+    {% include "_header.html.twig" %}
+    <main>
+        <div id="mainHeader">
+            <h1>My informations</h1>
+            <figure></figure>
+        </div>
+        <div id="userContent">
+            <article id="userCard">
+                <figure>
+                    <img src="{{user.image}}" alt="">
+                </figure>
+                <div class="info">
+                    <div class="firstData">
+                        <strong>{{user.username|slice(0,8)}}</strong>
+                        <figure>
+                            {% for flag in user.language %}
+                              <img id='flag' src="https://www.countryflagicons.com/SHINY/32/{{flag}}.png" alt="fr">
+                            {% endfor %}
+                        </figure>
+                    </div>
+                    <div class="secondData">
+                        <span>{{user.age}} yo</span>
+                        <span>{{user.city|slice(0,10)}}</span>
+                    </div>
+                    <div class="thirdData">
+                        <p>{{user.description|slice(0,115)}}...</p>
+                    </div>
+                    <div class="quarterData">
+                        <button>My profil's data</button>
+                    </div>
+                </div>
+            </article>
+            <div id='userData'>
+                <a>{{user.username|slice(0,8)}} <i class="fa fa-address-card" aria-hidden="true"></i></a>
+                <a>{{user.job|slice(0,13)}}... <i class="fa fa-briefcase" aria-hidden="true"></i></a>
+                <a>{{user.age}} years old <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                <a>{{user.city|slice(0,12)}}...<i class="fa-solid fa-map-pin"></i></a>
+                <a href="{{ path('app_user_profil') }}">Edit profil <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div id="footerData">
+            <span>{{user.username|slice(0,8)}}</span>
+            <span>{{user.age}} years old</span>
+            <span>|</span>
+            <span>{{user.email}}</span>
+            <span>********</span>
+            <span id="btn">change password</span>
+        </div>
+    </main>
+    <!-- background element -->
+    <figure id="flower" >
+        <img src="{{ asset('./assets/img/formes/algue-medium-sapin-gauche.svg') }}" alt="">
+    </figure>
+    <!-- footer -->
+    {% include "_footer.html.twig" %}
+</body>
+</html>
+<script src="{{ asset('./assets/js/header.js') }}"></script>

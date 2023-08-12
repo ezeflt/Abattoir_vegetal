@@ -1,0 +1,50 @@
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="{{ path('app_home')}}" class="brand">
+			<img  src="{{asset('./assets/favicon.ico')}}" alt="" >
+			<span class="text">Admin</span>
+		</a>
+		<ul class="side-menu top">
+
+			<li  class="{% if app.request.attributes.get('_route') == 'app_admin_index' %}active{% endif %}">
+				<a href="{{ path('app_admin_index')}}">
+					<i class='bx bxs-user-account' ></i>
+					<span class="text">Users</span>
+				</a>
+			</li>
+
+			<li class="{% if app.request.attributes.get('_route') == 'app_admin_grpindex' %}active{% endif %}">
+				<a href="{{ path('app_admin_grpindex')}}">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Groups</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+		
+			<li>
+				<a href="{{ path('app_user_profil_success') }}" >
+					<i class="bx bxs-smile" ></i>
+					<span class="text">My profil</span>
+				</a>
+			</li>
+			<li>
+				<a href="{{ path('app_logout') }}" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			
+			</nav>
+		<!-- NAVBAR -->

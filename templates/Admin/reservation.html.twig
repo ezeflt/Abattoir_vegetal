@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{asset('./assets/css/admin.css')}}">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Work+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>ADMIN</title>
+</head>
+<!-- body of page -->
+<body>
+    {% include "Admin/_adminNav.html.twig" %}
+    <section
+        class="container">
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Bookings</h1>
+                </div>
+            </div>
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Groups list</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>status</th>
+                                <th>Author</th>
+                                <th>created on</th>
+                                <th>actions</th>
+                                <th>Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for groups in groups %}
+                                <tr>
+                                    <td>{{ groups.status }}</td>
+                                    <td>{{ groups.authors }}</td>
+                                    <td>{{ groups.createdAt|date('Y-m-d H:i:s') }}</td>
+                                    <td>
+                                        <ul>
+                                            {% for guest in groups.guests %}
+                                                <li class="bg-secondary text-light mb-2 p-3">
+                                                    <strong>Guest:</strong>
+                                                    {{ guest.username }}<br>
+                                                    Invitation:
+                                                    {{ guest.invitation }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        {{ include('Admin/_grpdelete_form.html.twig') }}
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="7">no records found</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+</body>
+<script src="{{asset('./assets/js/admin.js')}}"></script>
+</html>

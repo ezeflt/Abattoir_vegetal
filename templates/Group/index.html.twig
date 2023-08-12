@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ asset('./assets/css/selectGroup.css') }}">
+    <title>SELECT USERS</title>
+</head>
+<body>
+	<!-- header nav bar -->
+	{% include "_header.html.twig" %}
+
+    <!-- contianer users and checkbox -->
+    <div id="container">
+
+        <!-- checkbox -->
+        <div id="inputBox">
+            <div id="subtitle">
+                <h1>Filter</h1>
+            </div>
+            <div id="allCenterIfInterest">
+                <div id="subtitle">
+                    <h3>Centre of interest</h3>
+                </div>
+				{% for formData in dataFormCheckbox %}
+				<div>
+					<label class="form-check-label me-auto label_checkbox" for="checkbox_{{ formData }}">{{ formData }}</label>
+					<input name="{{ formData }}" type="checkbox" id="checkbox_{{ formData }}" name="checkbox_{{ formData }}" data-filter="{{formData}}" class="filter-checkbox">
+				</div>
+				{% endfor %}
+            </div>
+            <input id="datePicker" type="date" name="datePicker">
+            <button type='submit' id="addGroup">Réserver Maintenant</button>
+        </div>
+
+        <!-- all users -->
+        <main id='allUsers'>
+            <div id='loaded'>
+                <!-- load animation -->
+                <span class="loader"></span>
+            </div>
+        </main>
+
+		<!-- footer -->
+		{% include "_footer.html.twig" %}
+    </div>
+    
+	<script src='{{ asset('./assets/js/header.js') }}'></script>
+	<script src='{{ asset('./assets/js/createGroup.js') }}'></script>
+</body>
+</html>

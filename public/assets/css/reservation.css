@@ -1,0 +1,843 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gasoek One', sans-serif;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #FF6C27; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+.background1{
+    height: 400px;
+    width: 400px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.background1 img{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+/* HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - HEADER - */
+/* navbar */
+header{
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+header div{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* navbar burger */
+header #burger{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #burger img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+/* navbar logo image */
+header #logo{
+    height: 100%;
+    width: 130px;
+}
+#logo a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #logo a img{
+    height: 100%;
+    width: 100%;
+}
+/* navbar navlink */
+header nav{
+    height: 100%;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoNavBox{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #12231A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoNav{
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+}
+/* nav responsive */
+#navResponsive{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 30;
+    display: none;
+}
+#navResponsive nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#navResponsive nav ul li{
+    list-style-type: square;
+    margin: 30px 40px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 1px 1px 1px #12231A;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+/* NOTIFICATIONS */
+#notificationBox{
+    position: fixed;
+    width: 400px;
+    background: #fff;
+    border-radius: 2px;
+    margin-top: 100px;
+    margin-right: 10%;
+    right: 0;
+    padding: 20px;
+    flex-direction: column;
+    z-index: 80;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: scroll;
+    height: 600px;
+    display: none;
+}
+#notificationBox article{
+    height: 230px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    /* margin: 30px 0px; */
+}
+#notificationBox h1{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-right: -20px;
+    font-size: 1.5em;
+}
+#notificationBox h1 span{
+    font-size: 1.5em;
+    color: red;
+    margin: 0px 10px;
+}
+#notificationBox h2{
+    margin: 10px 0px;
+    color: #46D4B3;
+    font-weight: 900;
+}
+#notificationBox p{
+    font-size: 0.9em;
+}
+#notificationBox .dataBox{
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #46D4B3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.first{
+    height: 65%;
+    width: 30%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+}
+.first h4{
+    font-size: 1em;
+    margin-left: 10px;
+}
+.first span{
+    font-size: 0.8em;
+    margin-left: 10px;
+    font-weight: 300;
+}
+.second{
+    height: 65%;
+    width: 22%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.second span{
+    font-size: 0.75em;
+    font-weight: 300;
+    margin-top: 3px;
+}
+.third{
+    height: 65%;
+    width: 45%;
+    background: #fff;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: scroll;
+}
+.third img{
+    height: 50px;
+    width: 50px;
+}
+#notificationBox .btnBox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+.btnNotif{
+    padding: 4px 20px;
+    margin: 0px 5px;
+    border: 1px solid #12231A;
+    text-transform: uppercase;
+    background: none;
+    color: #12231A;
+    cursor: pointer;
+    z-index: 40;
+}
+.btnNotif:nth-of-type(2){
+    padding: 4px 20px;
+    margin: 0px 5px;
+    background: #12231A;
+    border: 1px solid #12231A;
+    text-transform: uppercase;
+    background: #12231A;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+}
+/* MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - MAIN - */
+#container{
+    margin-top: 130px;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    /* flex-wrap: wrap; */
+    position: relative;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#reservationBox{
+    height: 600px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#reservationHeader{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+#reservationHeader h1{
+    text-transform: uppercase;
+    color: #FF6C27;
+    font-weight: 900;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FF6C27;
+}
+#reservationHeader a{
+    padding: 10px 30px;
+    border: 1px solid #12231A;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #12231A;
+    font-weight: 600;
+}
+#Reservations{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    padding: 0px 20px;
+    justify-content: start;
+}
+#Reservations article{
+    height: 70%;
+    width: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-right: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    /* change*/
+    justify-content: center;
+    background: #FBFAF4;
+}
+#Reservations article figure{
+    height: 25%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#Reservations article figure div{
+    /* background: #00f3a6; */
+    height: 50px;
+    width:  50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+#Reservations article #dateBox{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+}
+#dateBox strong{
+    font-size: 2em;
+    position: absolute;
+    top: 220px;
+    transform-origin: top left;
+    left: 30px;
+    transform: rotate(-90deg);
+}
+.firstData{
+    height: 100%;
+    width: 100%;
+}
+.dataContainer{
+    width: 700px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+.dataHeader{
+    height: 50px;
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.dataHeader h2{
+    color: #00f3a6;
+    margin-right: 10px;
+    font-size: 2em;
+}
+.dataHeader span{
+    color: #000;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.dataHeader img{
+    height: 30px;
+    width:  30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.dataMidle{
+    height: 100px;
+    width: 80%;
+    border: 1px solid #FF6C27;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.firstMiddle{
+    width: 120px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.firstMiddle h4{
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+.firstMiddle span{
+    margin-left: 10px;
+    font-size: 0.9em;
+    margin-top: 7px;
+    font-weight: 300;
+}
+.secondMiddle{
+    width: 300px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: scroll;
+}
+.secondMiddle img{
+    height: 70px;
+    width: 77px;
+    margin: 0px 10px;
+}
+.dataFooter{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.dataBonus{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.dataBonus h6{
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00f3a6;
+}
+.usersFooter{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.dataBonus span{
+    font-size: 0.8em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 0px;
+    color: #000;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn a{
+    padding: 5px 30px;
+    margin-top: 10px;
+    width: 50px;
+    border: 1.5px solid #12231A;
+    color: #12231A;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+}
+/* FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - */
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: #12231A;
+    z-index: 20;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footerContent{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* firstContent */
+#footerContent #firstContent{
+    height: 70%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#firstContent figure{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#firstContent div{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+#firstContent div span{
+    text-decoration: underline;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.7em;
+    text-align: left;
+    margin: 4px;
+}
+/* midlecontent */
+#footerContent #midleContent{
+    height: 70%;
+    width: 500px;
+}
+#midleContent h3{
+    margin-top: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+#midleContent span{
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+#midleContent div{
+    height: 30%;
+    margin-top: 30px;
+}
+#midleContent div input{
+    padding: 7px 0px;
+    padding-right: 140px;
+    background: #12231A;
+    border: 0px solid;
+    border-bottom: 1px solid #fff;
+    margin-right: 10px;
+    text-align: start;
+}
+#midleContent div input::placeholder{
+    color: #fff;
+    opacity: 0.5;
+}
+#midleContent div button{
+    padding: 7px 15px;
+    background: #12231A;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* thirdContent */
+#footerContent #thirdContent{
+    height: 70%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 300;
+}
+#footerContent #thirdContent span{
+    text-transform: lowercase;
+    font-size: 0.8em;
+}
+@media screen and ( max-width : 1100px ) {
+    /* footer */
+    #footerContent{
+        width: 90%;
+    }
+}
+@media screen and ( max-width : 1000px ) {
+    #reservationBox{
+        width: 90%;
+    }
+}
+@media screen and ( max-width : 970px ) {
+    /* footer */
+    #footerContent{
+        width: 100%;
+    }
+}
+@media screen and ( max-width : 850px ) {
+    #reservationHeader{
+        height: auto;
+        flex-direction: column;
+    }
+    #reservationHeader h1{
+        margin-bottom: 20px;
+    }
+    #Reservations article {
+        height: 70%;
+        width: auto;
+        margin-top: 20px;
+        margin-right: -9px;
+        scale: 0.8;
+    }
+    header div nav{
+        visibility: hidden;
+    }
+    /* footer */
+    #footerContent{
+        justify-content: space-between;
+    }
+    /* midlecontent */
+    #footerContent #midleContent{
+        width: 300px;
+    }
+}
+@media screen and ( max-width : 650px ) {
+    #footerContent{
+        flex-direction: column;
+    }
+    #footerContent #midleContent{
+        display: none;
+    }
+    /* navbar logo image */
+    header #logo{
+        margin-left: 60px;
+    }
+    #inputBox{
+        width: 100%;
+        position: static;
+        margin-left: 0%;
+        z-index: 10;
+        overflow: hidden;
+        padding: 0px;
+        margin-right: 0%;
+    }
+}
+@media screen and ( max-width : 600px ) {
+    #navResponsive{
+        height: 120%;
+    }
+    #burgerBox {
+        margin-left: 24px;
+    }
+    #navResponsive nav ul li {
+        margin: 26px 14px;
+        font-size: 1.5rem;
+    }
+    #navResponsive nav {
+        margin-left: 27px;
+    }
+    #mod
+    #reservationHeader h1{
+        font-size: 2.8rem;
+        margin-left: 20px;
+    }
+    #reservationHeader a{
+        margin-left: 20px;
+    }
+    #Reservations {
+        height: auto;
+        overflow: initial;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        padding: 0px;
+    }
+    #Reservations article {
+        margin: 20px;
+    }
+    #reservationBox {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        height: auto;
+    }
+    #Reservations article {
+        margin: 0px;
+        height: auto;
+        width: 100%;
+    }
+    #Reservations article figure {
+        height: 100px;
+        width: 100%;
+        background: #000;
+    }
+    #dateBox strong {
+        font-size: 2em;
+        position: absolute;
+        top: -66px;
+        left: 30px;
+        color: #fff;
+        transform: rotate(0deg);
+    }
+    #Reservations article #dateBox {
+        height: auto;
+    }
+    .dataMidle {
+        flex-direction: column;
+    }
+    .secondMiddle {
+        justify-content: center;
+    }
+    .dataContainer {
+        width: 100%;
+        height: 496px;
+    }
+    .dataMidle {
+        height: 149px;
+    }
+    .dataHeader {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dataHeader img {
+        margin: 20px;
+    }
+    .dataFooter {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .dataBonus {
+        width: 100%;
+    }
+    .btn{
+        margin: 20px 0px;
+    }
+}
+@media screen and ( max-width : 550px ) {
+    #navResponsive{
+        height: 120%;
+    }
+    #burgerBox {
+        margin-left: 24px;
+    }
+    #navResponsive nav ul li {
+        margin: 26px 14px;
+        font-size: 1.5rem;
+    }
+    #navResponsive nav {
+        margin-left: 27px;
+    }
+    #notificationBox{
+        position: fixed;
+        width: 90%;
+        background: #fff;
+        border-radius: 2px;
+        margin-top: 100px;
+        margin-right: 0%;
+        right: 0;
+        padding: 20px;
+        flex-direction: column;
+        z-index: 80;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: scroll;
+        height: 80%;
+        display: none;
+    }
+}
+@media screen and ( max-width : 440px ) {
+    #notificationBox h2{
+        margin: 10px 0px;
+        color: #46D4B3;
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+    .second h4{
+        font-size: 0.9em;
+    }
+    .first h4{
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+    .third{
+        height: 65%;
+        width: 100px;
+        background: #fff;
+        margin-right: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: scroll;
+    }
+}
+@media screen and ( max-width : 400px ) {
+    #reservationHeader h1{
+        font-size: 2rem;
+    }
+}
+@media screen and ( max-width : 360px ) {
+    #reservationHeader h1{
+        font-size: 2rem;
+    }
+    .secondMiddle {
+        width: 100%;
+    }
+    .dataMidle {
+        width: 95%;
+    }
+}
+@media screen and ( max-width : 330px ) {
+    #notificationBox h2{
+        margin: 10px 0px;
+        color: #46D4B3;
+        font-weight: 900;
+        font-size: 1em;
+    }
+
+}

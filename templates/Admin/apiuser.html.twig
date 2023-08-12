@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{asset('./assets/css/admin.css')}}">
+
+      <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Work+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>ADMIN</title>
+</head>
+<!-- body of page -->
+<body>
+
+
+    {% include "Admin/_adminNav.html.twig" %}
+
+<section class="container">
+
+
+<!-- MAIN -->
+<main>
+    <div class="head-title">
+        <div class="left">
+            <h1>API</h1>
+            
+        </div>
+
+    </div>
+
+ 
+    <div class="table-data">
+        <div class="order">
+            <div class="head">
+                <h3>Creation of API users in database</h3>
+            </div>
+   
+
+    {% if form.vars.errors|length > 0 %}
+        <div class="alert-danger">
+            {# Afficher les messages d'erreur associés au champ "postalCode" #}
+            {{ form_errors(form.postalCode) }}
+        </div>
+    {% endif %}
+
+    {% if alert is not empty %}
+        <div class="alert-danger">{{ alert }}</div>
+    {% endif %}
+     
+    <div  class="table-data">
+    {{ form_start(form) }}
+
+    <div class="inputBox">
+        <label for="">I speak ...</label>
+        {{ form_widget(form.language) }}
+    </div>
+
+    <div class="inputBox">
+        <label for="">I live in ...</label>
+        {{ form_widget(form.postalCode) }}
+    </div>
+
+    <div class="inputBox">
+        <label for="">I work in ...</label>
+        {{ form_widget(form.job) }}
+    </div>
+
+    <div class="inputBox">
+        <label for="">My description ...</label>
+        {{ form_widget(form.description) }}
+    </div>
+
+    <div id="thirdData">
+          <span>My diet ...</span>
+          <div>
+                {{ form_widget(form.diet) }}
+          </div>
+        </div>
+
+        <div id="thirdData"> 
+          <span>My center of interest ...</span>
+          <div id="allCheckbox">
+              <div id="checkboxBox">
+                {{ form_widget(form.centerOfInterest) }}
+              </div>
+          </div>
+        </div>
+
+        <button class='btn-api' type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+    </div>
+</div>
+			
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+</body>
+<script src="{{asset('./assets/js/admin.js')}}"></script>
+
+</html>

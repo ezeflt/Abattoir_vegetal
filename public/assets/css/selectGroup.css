@@ -1,0 +1,812 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gasoek One', sans-serif;
+}
+
+body{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+#loaded{
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.loader {
+    width: 150px;
+    height: 150px;
+    border: 5px dotted #FF6C27;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 10s linear infinite;
+    margin-top: 30%;
+  }
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+/* navbar */
+header{
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+header div{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* navbar burger */
+header #burger{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #burger img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+/* navbar logo image */
+header #logo{
+    height: 100%;
+    width: 130px;
+}
+#logo a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #logo a img{
+    height: 100%;
+    width: 100%;
+}
+/* navbar navlink */
+header nav{
+    height: 100%;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoNavBox{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #12231A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoNav{
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+}
+/* nav responsive */
+#navResponsive{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 30;
+    display: none;
+}
+#navResponsive nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+a{
+    text-decoration: none;
+}
+#navResponsive nav ul li{
+    list-style-type: square;
+    margin: 30px 40px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 1px 1px 1px #12231A;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#notificationBox{
+    position: fixed;
+    width: 400px;
+    background: #fff;
+    border-radius: 2px;
+    margin-top: 100px;
+    margin-right: 10%;
+    right: 0;
+    padding: 20px;
+    flex-direction: column;
+    z-index: 80;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: scroll;
+    height: 600px;
+    display: none;
+}
+#notificationBox article{
+    height: 230px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    /* margin: 30px 0px; */
+}
+#notificationBox h1{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-right: -20px;
+    font-size: 1.5em;
+}
+#notificationBox h1 span{
+    font-size: 1.5em;
+    color: red;
+    margin: 0px 10px;
+}
+#notificationBox h2{
+    margin: 10px 0px;
+    color: #46D4B3;
+    font-weight: 900;
+}
+#notificationBox p{
+    font-size: 0.9em;
+}
+#notificationBox .dataBox{
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #46D4B3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.first{
+    height: 65%;
+    width: 30%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+}
+.first h4{
+    font-size: 1em;
+    margin-left: 10px;
+}
+.first span{
+    font-size: 0.8em;
+    margin-left: 10px;
+    font-weight: 300;
+}
+.second{
+    height: 65%;
+    width: 22%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.second span{
+    font-size: 0.75em;
+    font-weight: 300;
+    margin-top: 3px;
+}
+.third{
+    height: 65%;
+    width: 45%;
+    background: #fff;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: scroll;
+}
+.third img{
+    height: 50px;
+    width: 50px;
+}
+#notificationBox .btnBox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+.btnNotif{
+    padding: 4px 20px;
+    margin: 0px 5px;
+    border: 1px solid #12231A;
+    text-transform: uppercase;
+    background: none;
+    color: #12231A;
+    cursor: pointer;
+    z-index: 40;
+}
+.btnNotif:nth-of-type(2){
+    padding: 4px 20px;
+    margin: 0px 5px;
+    background: #12231A;
+    border: 1px solid #12231A;
+    text-transform: uppercase;
+    background: #12231A;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+}
+/* container */
+#container{
+    width: 100%;
+    margin-top: 150px;
+    flex-wrap: wrap;
+}
+/* content checkbox and users */
+main{
+    width: 60%;
+    position: relative;
+    display: flex;
+    margin-left: 25%;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    flex-direction: row-reverse; /* Inverser l'ordre des éléments */
+}
+main h6{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: #FF6C27;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    margin-top: 30px;
+    right: 0;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px  #FF6C27;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    height: 100px;
+}
+main h6::after{
+    align-items: end;
+    content: '_____';
+    text-align: end;
+    margin-right: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #46D4B3;
+    text-shadow: 2px 2px 2px 2px  #46D4B3;
+}
+main article{
+    height: 520px;
+    width: 290px;
+    margin: 59px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s;
+}
+main article:nth-child(2n){
+    height: 520px;
+    width: 290px;
+    background: #fff;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 25%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+main article figure{
+    height: 50%;
+    width: 100%;
+}
+main article figure img{
+    height: 100%;
+    width: 100%;
+}
+.info{
+    height: 90%;
+    width: 85%;
+    background: #fff;
+    margin-top: 10%;
+}
+.firstData strong{
+    font-size: 1.2em;
+}
+.firstData{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firstData figure{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.firstData figure img{
+    height: auto;
+    width: 30%;
+    overflow: scroll;
+}
+.firstData figure{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+}
+.secondData{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.secondData span{
+    padding: 5px 15px;
+    background: #46D4B3;
+    margin-right: 10px;
+}
+.thirdData{
+    width: 100%;
+    height: 40%;
+}
+.thirdData p{
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+.quarterData{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .quarterData button{
+    width: 90%;
+    padding: 8px 0px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #fff;
+    
+}
+/* CHECKBOX */
+#inputBox{
+    height: 660px;
+    width: 280px;
+    background: #FFE801;
+    position: fixed;
+    left: 0;
+    margin-left: 3%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -10px;
+    overflow: scroll;
+}
+#allCenterIfInterest{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#inputBox::before{
+    content: '___';
+    position: absolute;
+    top: 0;
+    margin-top: -20px;
+    font-size: 2em;
+    font-weight: 900;
+}
+#subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+#subtitle h3{
+    font-weight: 900;
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#subtitle h3::after{
+    content: '__';
+}
+#inputBox div{
+    width: 90%;
+    /* background: red; */
+    padding: 10px 0px;
+    margin: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#inputBox button{
+    border: 1.5px solid #000;
+    background: none;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+#datePicker{
+    pointer-events: none;
+    width: 90%;
+    height: 30px;
+    background: #FFE801;
+    border: 1.5px solid #000;
+    opacity: 0.5;
+}
+.label_checkbox{
+    font-size: 1em;
+}
+/* footer */
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: #12231A;
+    z-index: 20;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footerContent{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* firstContent */
+#footerContent #firstContent{
+    height: 70%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#firstContent figure{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#firstContent div{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+#firstContent div span{
+    text-decoration: underline;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.7em;
+    text-align: left;
+    margin: 4px;
+}
+/* midlecontent */
+#footerContent #midleContent{
+    height: 70%;
+    width: 500px;
+}
+#midleContent h3{
+    margin-top: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+#midleContent span{
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+#midleContent div{
+    height: 30%;
+    margin-top: 30px;
+}
+#midleContent div input{
+    padding: 7px 0px;
+    padding-right: 140px;
+    background: #12231A;
+    border: 0px solid;
+    border-bottom: 1px solid #fff;
+    margin-right: 10px;
+    text-align: start;
+}
+#midleContent div input::placeholder{
+    color: #fff;
+    opacity: 0.5;
+}
+#midleContent div button{
+    padding: 7px 15px;
+    background: #12231A;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* thirdContent */
+#footerContent #thirdContent{
+    height: 70%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 300;
+}
+#footerContent #thirdContent span{
+    text-transform: lowercase;
+    font-size: 0.8em;
+}
+@media screen and ( max-width : 1270px ) {
+    /* content checkbox and users */
+    main{
+        margin-left: 30%;
+        width: 700px;
+    }
+    main article{
+        margin: 30px;
+    }
+    main article:nth-child(2n){
+    }
+    
+}
+@media screen and ( max-width : 1100px ) {
+    /* content checkbox and users */
+    main{
+        margin-left: 30%;
+    }
+    /* footer */
+    #footerContent{
+        width: 90%;
+    }
+    main article{
+        scale: 0.9;
+    }
+    main article:nth-child(2n){
+        scale: 0.9;
+    }
+}
+@media screen and ( max-width : 970px ) {
+    /* container */
+    #container{
+        width: 100%;
+        margin-top: 150px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    /* content checkbox and users */
+    main{
+        width: 80%;
+        position: relative;
+        display: flex;
+        margin-left: 0%;
+        left: 50%;
+        transform: translateX(-50%);        
+        flex-wrap: wrap;
+        flex-direction: row-reverse; /* Inverser l'ordre des éléments */
+        margin: 0;
+    }
+    #inputBox{
+        width: 40%;
+        position: static;
+        margin-left: 0%;
+    }
+    /* footer */
+    #footerContent{
+        width: 100%;
+    }
+    #midleContent div input{
+        padding-right: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and ( max-width : 850px ) {
+    main{
+        width: 100%;
+        margin-left: 0%;
+        left: 0%;
+        transform: translateX(0%);        
+        margin: 0;
+    }
+    main h6{
+        display: none;
+    }
+    main article:nth-child(2n){
+        margin-top: 0%;
+    }
+    .logoNavBox:nth-child(1){
+        visibility: hidden;
+    }
+    .logoNavBox:nth-child(3){
+        visibility: hidden;
+    }
+    /* footer */
+    #footerContent{
+        justify-content: space-between;
+    }
+    /* midlecontent */
+    #footerContent #midleContent{
+        width: 300px;
+    }
+    #midleContent div button{
+        padding: 7px 50px;
+    }
+    #midleContent h3{
+        margin-top: 0px;
+    }
+    #midleContent div{
+        height: 30%;
+        margin-top: 10px;
+    }
+}
+@media screen and ( max-width : 650px ) {
+    #footerContent{
+        flex-direction: column;
+    }
+    #inputBox{
+        width: 100%;
+        position: static;
+        margin-left: 0%;
+        z-index: 10;
+        overflow: hidden;
+        padding: 0px;
+    }
+    /* navbar logo image */
+    header #logo{
+        margin-left: 60px;
+    }
+    #footerContent #midleContent{
+        display: none;
+    }
+}
+@media screen and ( max-width : 550px ) {
+    #navResponsive{
+        height: 120%;
+    }
+    #burgerBox {
+        margin-left: 24px;
+    }
+    #navResponsive nav ul li {
+        margin: 26px 14px;
+        font-size: 1.5rem;
+    }
+    #navResponsive nav {
+        margin-left: 27px;
+    }
+    #mod
+    #notificationBox{
+        position: fixed;
+        width: 90%;
+        background: #fff;
+        border-radius: 2px;
+        margin-top: 100px;
+        margin-right: 0%;
+        right: 0;
+        padding: 20px;
+        flex-direction: column;
+        z-index: 80;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: scroll;
+        height: 80%;
+        display: none;
+    }
+}
+@media screen and ( max-width : 440px ) {
+    #notificationBox h2{
+        margin: 10px 0px;
+        color: #46D4B3;
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+    .second h4{
+        font-size: 0.9em;
+    }
+    .first h4{
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+    .third{
+        height: 65%;
+        width: 100px;
+        background: #fff;
+        margin-right: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: scroll;
+    }
+}
+@media screen and ( max-width : 350px ) {
+    main article{
+        height: 520px;
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    main article:nth-child(2n){
+        height: 520px;
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 25%;
+    }
+}
+@media screen and ( max-width : 330px ) {
+    #notificationBox h2{
+        margin: 10px 0px;
+        color: #46D4B3;
+        font-weight: 900;
+        font-size: 1em;
+    }
+
+}

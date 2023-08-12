@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Edit</title>
+  <link rel="stylesheet" href="{{ asset('./assets/css/editProfil.css') }}">
+</head>
+<body>
+  <img id="mentheBG" src="{{ asset('./assets/img/formes/algue-medium-menthe-gauche.svg') }}" alt="">
+  <img id="flowerRed" src="{{ asset('./assets/img/formes/marguerite-framboise.svg') }}" alt="">
+  <!-- header nav bar -->
+  {% include "_header.html.twig" %}
+  <!-- container -->
+  <div id='boxAvatar'>
+    <div>
+      <figure id='avatar1'>
+        <img src="https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="">
+      </figure>
+      <figure id='avatar2'>
+        <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/5419157-profil-utilisateur-femme-avatar-est-une-femme-un-personnage-pour-un-economiseur-d-ecran-avec-emotions-illustrationle-sur-fond-blanc-isole-vectoriel.jpg" alt="">
+      </figure>
+    </div>
+    <button id='selectAvatar'>select an avatar</button>
+  </div>
+  <main>
+    {{ form_errors(UserForm) }}
+    {{ form_start(UserForm, {'attr': {'id': 'container'}}) }}
+      <article>
+        <div id="first_second">
+          <!-- title -->
+          <h1 id='title'>My profile</h1>
+          <!-- left content -->
+          <div id="firstData">
+            <div class="inputBox">
+              <label for="">My name is ...</label>
+              {{ form_widget(UserForm.username) }}
+            </div>
+            <div class="inputBox2">
+              <label for="">I live in (France) ...</label>
+              {{ form_widget(UserForm.city) }}
+            </div>
+            <div class="inputBox3">
+              <label for="">I am now  ...</label>
+              {{ form_widget(UserForm.age) }}
+              <span>years old</span>
+            </div>
+            <div class="inputBox4">
+              <label for="">I am a ...</label>
+              <section>
+                {{ form_widget(UserForm.gender) }}
+              </section>
+            </div>
+            <div class="inputBox">
+              <label for="">I speak ...</label>
+              {{ form_widget(UserForm.language, {'attr': {'class': 'btn-diet'}}) }}
+            </div>
+          </div>
+          <!-- right content -->
+          <div id="secondData">
+            <div id="imageBox">
+              <figure id="imageProfil">
+                <img src="../assets/img/icones/profil/profil-big.svg" alt="">
+              </figure>
+              <div id="inputFileBox">
+                {{ form_widget(UserForm.image, {'attr': {'class': 'imageInput'} } ) }}
+                {{ form_label(UserForm.image ) }}
+                <input id="avatar" disabled type="file" title=""/>
+                <label id='btnSelect' for="avatar">select an avatar</label>
+              </div>
+            </div>
+            <div class="inputBox">
+              <label for="">I work in ...</label>
+              {{ form_widget(UserForm.job) }}
+            </div>
+            <div class="inputBox">
+              <label for="">My description ...</label>
+              {{ form_widget(UserForm.description) }}
+            </div>
+          </div>
+        </div>
+        <!-- bottom content  -->
+        <div id="thirdData">
+          <span>My diet ...</span>
+          <div>
+            <div id="check">
+              <div class="btn-diet">
+                {{ form_widget(UserForm.diet) }}
+              </div>
+              <button type="button" id="next">Next</button>
+            </div>
+          </div>
+        </div>
+        <!-- next content -->
+        <div id="nextSelect"> 
+          <span>My center of interest ...</span>
+          <div id="allCheckbox">
+              <div id="checkboxBox">
+                {{ form_widget(UserForm.centerOfInterest) }}
+              </div>
+          </div>
+          <div class="nextInputText">
+            <label for="">I have others ...</label>
+            {{ form_widget(UserForm.centerOfInterestPerso) }}
+          </div>
+          <div id="btnBox">
+            <button id="preview">preview</button>
+            {{ form_widget(UserForm.submit) }}
+          </div>
+        </div>
+      </article>
+    {{ form_end(UserForm) }}
+  </main>
+</body>
+</html>
+<script src="{{ asset('./assets/js/editProfil.js') }}"></script>
+<script src="{{ asset('./assets/js/header.js') }}"></script>

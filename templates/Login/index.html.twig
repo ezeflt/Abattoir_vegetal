@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ asset('./assets/css/login.css') }}">
+    <title>LOGIN</title>
+</head>
+<!-- body of page -->
+<body>
+    {% include "Login/background.html.twig" %}
+    <!-- navbar -->
+    {% include "_nav.html.twig" %}
+    <!-- login Box -->
+    <article id="registerBox1">
+        <h1>login</h1>
+        <div id="registerBox2">
+            {{ form_errors(Form)}}
+            {{ form_start(Form, {'attr': {'class': 'inputBox'}} )}}
+             {# Display alert message if there are any errors #}
+              {% if alert is not empty %}
+                <span style='color:red'>{{ alert }}</span>
+              {% endif %}
+                <div class="input">
+                    {{ form_widget(Form.email, {'attr': {'class': 'input custom-input', 'placeholder': 'e-mail address'}}) }}
+                </div>        
+                <div class="input">
+                    {{ form_widget(Form.password, {'attr': {'class': 'input custom-input', 'placeholder': 'Password'}}) }}
+                </div>   
+                {{ form_widget(Form.submit, {'attr': {'id': 'btn', 'class': 'btn'}}) }}
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" alt="google logo">
+                    <button>login with google</button>
+                </figure>
+                <a href="{{ path('app_register') }}"><span>Register</span></a>
+             {{ form_end(Form)}}
+        </div>
+    </article>
+</body>
+<script src="{{asset('./assets/js/navbar.js')}}"></script>

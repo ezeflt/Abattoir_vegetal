@@ -1,0 +1,28 @@
+<h6>so many <br> friends ... <br> </h6>
+{% for user in users %}
+<article>
+    <figure>
+        <img src="{{ user.image }}" alt="headUser">
+    </figure>
+    <div class="info">
+        <div class="firstData">
+            <strong>{{ user.username|slice(0,10) }}</strong>
+            <figure>
+                {% for languageCode in user.language|slice(0,2) %}
+                <img src="https://www.countryflagicons.com/SHINY/32/{{ languageCode }}.png" alt="{{ languageCode }}">
+                {% endfor %}
+            </figure>
+        </div>
+        <div class="secondData">
+            <span>{{ user.age }} yo</span>
+            <span>{{ user.city|slice(0,15) }}</span>
+        </div>
+        <div class="thirdData">
+            <p>{{ user.description|slice(0,152) }}...</p>
+        </div>
+        <div class="quarterData">
+            <button id="idUser" value='{{ user.id }}'>Gimme this friend</button>
+        </div>
+    </div>
+</article>
+{% endfor %}
