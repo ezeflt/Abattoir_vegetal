@@ -9,7 +9,7 @@ Découvrez Abattoir Végétal : une plateforme dédiée aux véganes pour des re
 
 # Prérequis
 - PHP 8.0.2
-- MongoDB
+- MongoDB + extension mongodb.so
 - Symfony version 6.0.
 
 # Installation
@@ -23,6 +23,18 @@ Ensuite, tapez dans l'ordre les commandes dans votre terminal :
 composer install
 symfony server:start -d
 `````
+
+##### Étapes de développement utilisant le modèle MVC (Modèle-Vue-Contrôleur) :
+
+Modèle (Model) - Repository : Il abrite la logique métier et les interactions avec la base de données. Au sein de ces repositories, j'ai regroupé toutes les fonctions dédiées à l'exécution des requêtes et à la manipulation des données dans la base de données. Cette structure organisée facilite la gestion et la récupération efficace des informations nécessaires pour le bon fonctionnement de l'application.
+
+Vue (View) - Utilisation de Twig : Les vues sont créées avec Twig, un moteur de template puissant. Cela permet de séparer la logique d'affichage du code PHP, facilitant ainsi la maintenance et l'organisation du front-end.
+
+Contrôleur (Controller) - Contrôleur Symfony : Les contrôleurs Symfony orchestrent les interactions entre les modèles et les vues. Ils gèrent les actions utilisateur, traitent les données, puis renvoient les résultats aux vues appropriées.
+
+L'utilisation du modèle MVC offre une série d'avantages significatifs. Elle favorise la séparation des préoccupations en divisant le développement en modules distincts, ce qui rend le code plus modulaire et maintenable. De plus, cela facilite la collaboration entre développeurs, car les différents aspects du projet sont clairement définis et structurés.
+
+
 # Développeurs & Designers
 Développeurs :
 - Ezechiel Github [@ezeflt](https://github.com/ezeflt)
