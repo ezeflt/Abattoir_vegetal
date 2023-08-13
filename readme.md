@@ -24,7 +24,7 @@ composer install
 symfony server:start -d
 `````
 
-##### Étapes de développement utilisant le modèle MVC (Modèle-Vue-Contrôleur) :
+### Étapes de développement MVC (Modèle-Vue-Contrôleur) :
 
 Modèle (Model) - Repository : Il abrite la logique métier et les interactions avec la base de données. Au sein de ces repositories, j'ai regroupé toutes les fonctions dédiées à l'exécution des requêtes et à la manipulation des données dans la base de données. Cette structure organisée facilite la gestion et la récupération efficace des informations nécessaires pour le bon fonctionnement de l'application.
 
