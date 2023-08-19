@@ -1,9 +1,4 @@
 <div id="" align="center">
-  <img src="./public/assets/img/background.png" width="100%" />
-</div>
-<br>
-
-<div id="" align="center">
   <img src="./public/assets/img/logo/abattoir-vegetal-logo-small-light.svg" alt="Logo Abattoir Végétal" width="50%" />
 </div>
 
@@ -25,6 +20,10 @@ Contrôleur (Controller) - Contrôleur Symfony : Les contrôleurs Symfony orches
 
 L'utilisation du modèle MVC offre une série d'avantages significatifs. Elle favorise la séparation des préoccupations en divisant le développement en modules distincts, ce qui rend le code plus modulaire et maintenable. De plus, cela facilite la collaboration entre développeurs, car les différents aspects du projet sont clairement définis et structurés.
 
+<div id="" align="center">
+  <img src="./public/assets/img/background.png" width="100%" />
+</div>
+<br>
 
 # Développeurs & Designers
 Développeurs :
