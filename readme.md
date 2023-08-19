@@ -1,15 +1,19 @@
 <div id="" align="center">
-  <img src="./public/assets/img/logo/abattoir-vegetal-logo-small-light.svg" alt="Logo Abattoir Végétal" width="50%" />
-</div>
-<div id="" align="center">
   <img src="./public/assets/img/background.png" width="100%" />
+</div>
+<br>
+
+<div id="" align="center">
+  <img src="./public/assets/img/logo/abattoir-vegetal-logo-small-light.svg" alt="Logo Abattoir Végétal" width="50%" />
 </div>
 
 <br>
+#Description :
 Découvrez Abattoir Végétal : une plateforme dédiée aux véganes pour des rencontres culinaires inoubliables. Créez un compte, trouvez des compagnons partageant vos intérêts, formez des groupes pour des dîners exceptionnels, et vivez l'excitation de décider ensemble. Un espace pour les véganes, par les véganes.
 
 ### lien du site https://abattoir-vegetal.sekhmet.lapasserelle.school/
 
+<br>
 
 # Méthode de travaille MVC (Modèle-Vue-Contrôleur) :
 
