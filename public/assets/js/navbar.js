@@ -19,7 +19,6 @@ const modalBox = document.querySelector('#modalBox');
 //visible value of modal
 var modal = false;
 
-
 /**
  * when clicked btnNavRespisove -> count +1
  * if count = 1 then open nav bar 
